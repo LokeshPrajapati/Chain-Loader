@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  clear: both;
+}
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.cross {
+  width: 80px;
+  height: 25px;
+  border: 6px solid yellow;
+  border-radius: 80px;
+  position: relative;
+  animation: spin 3s infinite cubic-bezier(0.71, -0.09, 0.58, 1);
+}
+.cross:first-child,
+.cross:last-child {
+  animation-delay: 2.5s;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
